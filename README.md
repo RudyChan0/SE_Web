@@ -8,12 +8,12 @@
 - 陈少谦
 - 张智 181860144 zz001018
 
-##下载依赖
+### 下载依赖
 ```bash
 npm install create-react-app
 ```
 
-##项目运行
+### 项目运行
 ```bash
 npm start
 ```
