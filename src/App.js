@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Editablelist from './list';
+import Data from './list';
 
 
 
@@ -76,9 +77,7 @@ function Employee() {
 
 
 function List() {
-  return(
-    Editablelist()
-  )
+  Data.render()
   
 
 }
