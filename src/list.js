@@ -41,12 +41,23 @@ export default class Data extends React.Component {
        //this.handleClick = this.handleClick.bind(this);
     } 
 
-        deletedata(deletekey){
+    deletedata=(deletekey)=>{
+        alert(this.state.data[0].lastName)
+        this.setState((deletekey,props)=>{
+            return{
+                data:this.state.data.splice(deletekey,1)
+            }
+        }
+
+        )
+        alert(this.state.data[0].lastName)
+    }
+/*         deletedata(deletekey){
             this.setState({
                 data:this.state.data.splice(deletekey,1),
             })
 
-        }
+        } */
     
 
 /*     getdata(){
@@ -98,7 +109,7 @@ export default class Data extends React.Component {
             render={(text, record) => (
                 <Space size="middle">
                     <a>Edit {record.lastName}</a>
-                    <button onClick={(this.deletedata(record.key)).bind(this)}><font color="#FF0000">Delete</font></button>
+                    <a onClick={this.deletedata.bind(record.key)}><font color="#FF0000">Delete</font></a>
                 </Space>
             )}
         />
