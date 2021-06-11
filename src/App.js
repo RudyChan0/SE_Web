@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import ReactDOM from 'react-dom';
 import './App.css';
 import React from "react";
 import {
@@ -13,7 +14,7 @@ import Data from './list';
 
 
 
-
+//let listdata=new Data();
 export default function App() {
   return (
     <Router>
@@ -77,8 +78,9 @@ function Employee() {
 
 
 function List() {
-  Data.render()
-  
-
+  const listdata=new Data();
+  return(
+    listdata.render()
+  )
 }
 
